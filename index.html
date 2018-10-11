@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/index.css">
+    <title>Minesweeper</title>
+</head>
+
+<body onload="initGame()">
+    <div class="big-board">
+        <div class="main">
+            <span class="mines-count">0</span>
+            <span class="smiley" onmouseover="overSmily(event)" onmouseout="overSmily(event)" onclick="restartGame()">😃</span>
+            <span class="cor-time">0</span>
+        </div>
+        <div class="board-mine"></div>
+
+        <div class="levels">
+            <button onclick="level(8,5,1)">Easy</button>
+            <button onclick="level(10,10,2)">Meduim</button>
+            <button onclick="level(12,15,3)">Hard</button>
+            <button onclick="levelCustom()">Custom</button>
+        </div>
+        <div class="custom">
+            <h2>Size:</h2><input class="s" type="number"><h2>Mines:</h2><input class="m" type="number"><button onclick="sendLevel()">Start</button>
+            <span class="comments"></span>
+        </div>
+        <div class="best-time">Best time of level <span class="level-class"></span> is: <span class="level-time"></span> sec </div>
+    </div>
+    <script src="js/index.js"></script>
+    <script src="js/genral.js"></script>
+</body>
+
+</html>
