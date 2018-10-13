@@ -258,3 +258,7 @@ function cellMarked(elCell, elClick, i, j) {
 }
 
 
+
+function goToGallery(){
+    window.open(`https://tommanger.github.io/ca-gallery-master/`,'_blank');
+}
